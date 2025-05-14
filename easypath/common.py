@@ -1,5 +1,4 @@
-from typing import Literal, TypeAlias
-
+from typing_extensions import TypeAlias, Literal
 
 OpenTextModeUpdating: TypeAlias = Literal[
     "r+",

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easypath"
+authors = [
+    { name = "WJBFks" },
+]
+readme = "README.md"
+description = "A Python library for easier use of the path. To replace os.path and pathlib.Path"
+requires-python = ">=3.9"
+keywords = ["path", "easypath", "pathlib"]
+license = "MIT"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["typing_extensions"]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["easypath"]
+
+[project.urls]
+Repository = "https://github.com/WJBFks/easypath"
+
+[tool.setuptools.dynamic]
+version = { attr = "easypath.__version__" }
