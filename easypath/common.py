@@ -1,4 +1,4 @@
-from typing_extensions import TypeAlias, Literal
+from typing_extensions import TypeAlias, Literal, Union
 
 OpenTextModeUpdating: TypeAlias = Literal[
     "r+",
@@ -36,4 +36,4 @@ OpenTextModeUpdating: TypeAlias = Literal[
 ]
 OpenTextModeWriting: TypeAlias = Literal["w", "wt", "tw", "a", "at", "ta", "x", "xt", "tx"]
 OpenTextModeReading: TypeAlias = Literal["r", "rt", "tr", "U", "rU", "Ur", "rtU", "rUt", "Urt", "trU", "tUr", "Utr"]
-OpenTextMode: TypeAlias = OpenTextModeUpdating | OpenTextModeWriting | OpenTextModeReading
+OpenTextMode: TypeAlias = Union[OpenTextModeUpdating, OpenTextModeWriting, OpenTextModeReading]
